@@ -1,10 +1,137 @@
+@font-face 
+{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url('/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+:root
+{
+    --primary-color: #ff0000;
+    --secondary-color: #6c757d;
+    --background-dark-color:  #616b6baf;
+    --background-dark-grey: #1d1d1f;
+    --border-color: #2e344e;
+    --background-light-color: #F1F1F1;
+    --background-light-color-2: #585f5faf;
+    --white-color: #FFF;
+    --font-light-color: #e6fcff;
+    --font-dark-color: #313131;
+    --font-dark-color-2: #5f0000;
+    --text-color : #2e0d0d;
+    --scrollbar-bg-color: #383838;
+     
+}
+
+html
+{
+    font-size: 60%;
+    overflow-x: hidden;
+
+}
+
 body
 {
-    background: grey linear-gradient(rgb(233, 211, 211), rgb(208, 208, 240));
+    background: var(--background-dark-color);
     font-family: 'Open Sans', sans-serif;
-    font-size: 17px;
-    color:  #000;
+    font-size: 16px;
+    color:  var(--text-color);
     margin: 0;
     height: 100vh;
 }
+
+section{
+    min-height: 100vh;
+    padding: 10rem 6% 2rem;
+ 
+}
+
+.header
+{
+    position: static;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    background: var(--background-light-color-2);
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--font-light-color);
+    cursor: default;
+    margin-left: 0%;
+}
+
+.logo img 
+{
+    filter: brightness(50%) invert(50); /* Apply the inversion */
+    filter: hue-rotate(45deg) invert(150%) saturate(100%);
+}
+  
+.logo:hover img 
+{
+    filter: hue-rotate(90deg) invert(100%) saturate(200%);
+}
+
+.navbar a 
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 3rem;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover,
+.navbar a:active
+{
+    color: var(--primary-color);
+}
+
+#m-icons
+{
+    font-size: 3rem;
+    color: var(--font-dark-color-2);
+    display: none;
+
+}
+
+#m-icons:hover
+{
+    color: var(--primary-color);
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--background-dark-color);
+}
+
+
+
+
+
 
