@@ -19,7 +19,7 @@
 :root{
     --primary-color: #d8c201;
     --secondary-color: #6c757d;
-    --background-dark-color:  #f5f5f500;
+    --background-dark-color:  #4e4e4e;
     --background-dark-grey: #1d1d1f;
     --border-color: #2e344e;
     --background-light-color: #F1F1F1;
@@ -28,7 +28,7 @@
     --font-light-color: #e6fcff;
     --font-dark-color: #313131;
     --font-dark-color-2: #5f0000;
-    --text-color : #2e0d0d;
+    --text-color : #d1cdc7;
     --scrollbar-bg-color: #383838;    
 }
 
@@ -49,7 +49,7 @@ body{
 
 section{
     min-height: 100vh;
-    padding: 7rem 4.5% 1.5rem;
+    padding: 0.5rem 4% 1rem;
 }
 
 .header{
@@ -111,16 +111,23 @@ section{
     align-items: center;
     justify-content: space-between;
     background: var(--background-dark-color);
+    gap: 1.5rem
 }
 
 .home-content h4{
     font-size: 2.1rem;
     font-weight: calc(50% + 1rem);
 }
+
+span{
+    color: var(--primary-color);
+} 
+
 .home-content h5{
     font-size: 2.5rem;
     font-weight: calc(50% + 1rem);
 }
+
  .home-content p{
     font-size: 1.6rem;
 }
@@ -134,13 +141,46 @@ section{
     background: transparent;
     border: 2rem solid var(--background-light-color);
     margin: 3rem 1.6rem 3rem 0;
-    transition: 5s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .social-media a:hover{
     background:  2rem solid var(--background-light-color);
     color: var(--primary-color);
     box-shadow: 0 0 1rem var(--primary-color);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background-color: var(--background-light-color);
+    border-radius: 4rem;
+    border: 2px solid var(--background-light-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var( --font-dark-color-2);
+    transition: all ease-in-out 1s;
+}
+
+.btn:hover{
+    box-shadow: 0 0 1rem var(--primary-color);
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--background-light-color-2);
+    gap: 3rem;
+}
+
+.about-img img{
+    width: 40vw; 
+}
+
+.heading{
+    text-align: center;
+    
 }
 
 
