@@ -26,9 +26,10 @@
     --background-light-color-2: #585f5faf;
     --white-color: #FFF;
     --font-light-color: #e6fcff;
-    --font-dark-color: #313131;
+    --font-dark-color: #cca675;
     --font-dark-color-2: #5f0000;
     --text-color : #d1cdc7;
+    --text-color-2: rgb(7, 172, 163);
     --scrollbar-bg-color: #383838;    
 }
 
@@ -208,10 +209,109 @@ span{
     flex-wrap: wrap;
     gap: 2rem;
 }
+
 .service-container .service-box{
     flex: 1 1 30rem;
     background: var(--secondary-color);
     padding: 4rem 4rem 4rem;
     border-radius: 2rem;
     text-align: center;
+    border: 0.5rem solid var(--background-light-color);
+    transition: .5s ease-in-out;
+}
+
+.service-container .service-box :hover{
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+.service-box i{
+    font-size: 6rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-box h3{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--font-dark-color-2);
+}
+
+.service-box p{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin: 1rem 0 2rem;
+}
+
+.portfolio{
+    background: var(--background-light-color-2);
+}
+
+.portfolio h2{
+    margin-bottom: 4rem;
+}
+
+.porfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.porfolio-container .porfolio-box{
+    position: relative;
+    border-radius: 2rem ;
+    box-shadow: .5rem .5rem 2rem var(--primary-color);
+    overflow: hidden;
+    display: flex;
+    border: 0.2rem solid var(--background-light-color);
+}
+
+.porfolio-box img{
+    width: 100%;
+    transition: 1s ease-in-out;
+}
+
+.porfolio-box img:hover{
+    transform: scale(1.1);
+}
+
+.porfolio-box .porfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear gradient(rgba(247, 224, 20, 0.1), var(--background-light-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.4rem;
+    transform: translateY(100%);
+    transition: 1.5s ease-in-out;
+}
+
+.porfolio-box:hover .porfolio-layer{
+    transform: translateY(0);
+}
+
+.porfolio-layer h3{
+    font-size: 2.5rem;
+    color: var(--font-dark-color);
+    margin-bottom: 1rem;
+}
+
+.porfolio-layer p{
+    font-size: 1.6rem;
+    color: rgb(161, 161, 5):
+    margin-bottom: 1rem;
+}
+.portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color-2);
+
 }
