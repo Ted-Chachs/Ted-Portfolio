@@ -3,6 +3,22 @@ let sections = document.querySelectorAll('section');
 let navlinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
+    // let scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+    // for (let s in sections) {
+    //     if (sections.hasOwnProperty(s) && sections[s].offsetTop <= scrollPos) {
+    //         let id = sections[s].id;
+    //         for (let n in navlinks) {
+    //             if (navlinks.hasOwnProperty(n)) {
+    //                 navlinks[n].classList.remove('active');
+    //             }
+    //             if (navlinks[n].hasAttribute('href') && navlinks[n].getAttribute('href').indexOf(id) !== -1) {
+    //                 navlinks[n].classList.add('active');
+    //             }
+    //         }
+    //     }
+    // }
+
+
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 150;
