@@ -60,6 +60,7 @@ section{
     left: 0;
     width: 100%;
     padding-right: 1.5rem;
+    padding-left: 1.5rem;
     display: flex;
     background: var(--background-light-color-2);
     justify-content: space-between;
@@ -75,13 +76,14 @@ section{
 }
 
 .logo img{
-    filter: brightness(50%) invert(50); /* Apply the inversion */
-    filter: hue-rotate(45deg) invert(150%) saturate(100%);
+    filter: brightness(50%) inherit(100%) hue-rotate(45deg) saturate(100%);
+    height: 85px;
+    width: 120px;
+    object-fit: contain;
 }
   
-.logo:hover img 
-{
-    filter: hue-rotate(90deg) invert(100%) saturate(200%);
+.logo:hover img {
+    filter: brightness(100%) hue-rotate(315deg) saturate(150%); /* Adjust the values for your color shift effect */
 }
 
 .navbar a {
