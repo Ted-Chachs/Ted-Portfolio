@@ -8,7 +8,7 @@ class Particle{
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.radius = Math.random() * 2.25 + 1;
+        this.radius = Math.random() * 3 + 1;
         this.speedX = Math.random() * 3 - 1;
         this.speedY = Math.random() * 3 - 1;
     }
@@ -21,7 +21,7 @@ class Particle{
     }
 
     draw() {
-    ctx.fillStyle = 'orange';
+    ctx.fillStyle = 'white';
     ctx.strokeStyle = 'gold';
     ctx.lineWidth = 2;
     ctx.beginPath();

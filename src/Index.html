@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 
     <head>
         <meta charset="utf-8">
@@ -18,8 +18,8 @@
         <link href='public/bootstrap.min.css' rel="stylesheet" type="text/css">
 
         <!--  Boostrsp 5 imported extensions --> 
-        <script src="public/scripts/jquery.slim.min.js"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <!-- <script src="public/scripts/jquery.slim.min.js"></script> -->
+        <!-- <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> -->
         <script src="public/scripts/bootstrap.min.js"></script>
 
     </head>
@@ -31,9 +31,8 @@
                     <div class="col-md-3">
                         <a class="logo" href="#"><img src="pics/sign2.png" alt="logo"></a>
                     </div>
-                    <div class="col-md-9">
-                        <i class='bx bx-menu-alt-right' id="m-icons"></i>
-                        <nav class="navigation navbar-expand-sm" id="nav">
+                    <div class="col-md-9" id="colicon">
+                        <nav class="navigation navbar navbar-expand-sm" id="nav">
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
@@ -66,8 +65,8 @@
         </header>
 
         <!-- home-section design -->
-        <section class="home " id="home">
-            <canvas id="particle-canvas" style="position: fixed; z-index: -1;"></canvas>
+        <section class="home" id="home">
+            <canvas id="particle-canvas"></canvas>
 
             <div class="home-content">
                 <h4>Hallo,it's Mr </h4>
@@ -90,8 +89,14 @@
                 <a href="" class="btn">Download Resume</a>
             </div>
 
-            <div class="home-image">
-                <img src="pics/cha1.png" alt="Profile">
+            <div class="home-img">
+                <div class="container" id="cont">
+                    <div class="row align-items-center">
+                        <div class="pic col-12 col-lg-4">
+                            <img src="pics/cha1.png" alt="Profile" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </section>
@@ -231,7 +236,7 @@
         <!-- contact section design -->
 
         <section class="contact" id="contact">
-            <h2 class="contact" >Reach Out <span>Share Your Thoughts/Inquiries</span></h2>
+            <h2 class="heading" >Reach Out <span>Share Your Thoughts/Inquiries</span></h2>
 
             <form action="#">
                 <div class="input-box">
@@ -253,7 +258,7 @@
 
         <!-- footer design! -->
 
-        <footer class="footer">
+        <footer class="footer container">
             <div class="footer-text" id="footer">
                 <p>Copyrights &copy; 2023 by Reuben Teddy | All Rights Reserved</p>
             </div>

@@ -49,7 +49,7 @@ body{
 
 section{
     min-height: 100vh;
-    padding: 0.5rem 4% 1rem;
+    padding: 0.5rem 3% .5rem;
     font-family: 'Lato', sans-serif;
 }
 
@@ -99,21 +99,34 @@ section{
     color: var(--primary-color);
 }
 
-#m-icons{
-    font-size: 3rem;
-    color: var(--font-dark-color-2);
-    display: none;
+.home #particle-canvas{
+    position: fixed; 
+    z-index: -1;
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    height: 100%;
 }
-
-#m-icons:hover{
-    color: var(--primary-color);
-}
-
 
 .home{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home-content{
+    flex: 1 1 18rem;
+    padding: 1rem;
+}
+
+.home-img{
+    flex: 1 1 18rem;
+}
+
+.home-img img{
+    width: 90%;
+    object-fit: contain;
 }
 
 .home-content h4{
@@ -138,12 +151,14 @@ span{
     display: inline-flex ;
     align-items: center;
     justify-content: center;
+    color: #72a19f;
     width: 4rem;
     height: 4rem;
     background: transparent;
-    border: 2rem solid var(--background-light-color);
-    margin: 3rem 1.6rem 3rem 0;
+    border: .2rem solid var(--primary-color);
+    margin: .3rem .6rem .3rem 0;
     transition: 1s ease-in-out;
+    border-radius: 40% 30%;
 }
 
 .social-media a:hover{
@@ -171,9 +186,22 @@ span{
 .about{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    align-content: center;
+    justify-content: normal;
     background: var(--background-light-color-2);
-    gap: 3rem;
+    gap: 2rem;
+    flex-wrap: wrap-reverse;
+    width: 98%;
+}
+
+.about-img{
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+
+.about-content{
+    flex: 1 1 30rem;
+    padding: 2rem;
 }
 
 .about-img img{
@@ -221,6 +249,18 @@ span{
     transition: .5s ease-in-out;
 }
 
+@media (min-width: 920px) {
+    .service-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .service-container .service-box {
+        flex: 1 1 20rem;
+    }
+}
+
 .service-container .service-box :hover{
     border-color: var(--primary-color);
     transform: scale(1.05);
@@ -245,6 +285,7 @@ span{
 
 .portfolio{
     background: var(--background-light-color-2);
+    width: 98%;
 }
 
 .portfolio h2{
@@ -256,6 +297,17 @@ span{
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .portfolio-box {
+        flex: 1 1 20rem;
+    }
 }
 
 .porfolio-container .porfolio-box{
@@ -319,6 +371,7 @@ span{
 
 .contact h2{
     margin-bottom: 4rem;
+    justify-content: center;
 }
 
 .contact form{
@@ -336,13 +389,14 @@ span{
 
 .contact form .input-box input,
 .contact form textarea {
-    width: 100%;
-    padding: 1rem 1.5rem;
+    width: 95%;
+    padding: 1rem 1.25rem;
     font-size: 1.6rem;
     color: var(--font-dark-color-2);
     background: var(--font-dark-color);
     border-radius: .9rem;
     margin: .7rem 0.2rem;
+    object-fit: contain;
 }
 
 .contact form .input-box input{
@@ -362,11 +416,13 @@ span{
 
 .footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem 15rem;
     background: var(--background-light-color-2);
+    width: 100%;
+    padding: 0.5rem 3% .5rem;
 }
 
 .footer-text p{
